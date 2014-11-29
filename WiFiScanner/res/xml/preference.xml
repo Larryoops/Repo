@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="edittext_screen"
+    android:summary="設定說明"
+    android:title="設定" >
+
+    <Preference
+        android:key="reset_button"
+        android:summary="將所有參數恢復成預設值"
+        android:title="重設所有設定" />
+
+    <com.example.wifiscanner.SwitchPref
+        android:defaultValue="true"
+        android:key="DisplayRuler"
+        android:summaryOff="隱藏尺規"
+        android:summaryOn="顯示尺規"
+        android:title="尺規" />
+
+
+    <!-- 第二组 -->
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="edittext_screen"
+        android:layout="@layout/pref_textview"
+        android:summary="設定路徑圖"
+        android:title="路徑圖" >
+        <ListPreference
+            android:defaultValue="@string/default_StrideMultiply_entries"
+            android:dialogTitle="請選擇移動距離倍率"
+            android:entries="@array/StrideMultiply_entries"
+            android:entryValues="@array/StrideMultiply_entries"
+            android:key="StrideMultiply"
+            android:summary="選擇倍率"
+            android:title="移動距離倍率" >
+        </ListPreference>
+
+        <com.example.wifiscanner.SwitchPref
+            android:defaultValue="true"
+            android:key="DisplayNode"
+            android:summaryOff="隱藏路徑節點"
+            android:summaryOn="顯示路徑節點"
+            android:title="節點" />
+        <com.example.wifiscanner.SwitchPref
+            android:defaultValue="true"
+            android:key="DisplayPath"
+            android:summaryOff="隱藏路徑"
+            android:summaryOn="顯示路徑"
+            android:title="路徑" />
+        <com.example.wifiscanner.SwitchPref
+            android:key="NoStopPath"
+            android:summaryOff="暫停服務就停止計算"
+            android:summaryOn="暫停服務仍然繼續計算"
+            android:title="不停止計算路徑" />
+    </PreferenceCategory>
+
+    <!-- 第三组 -->
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="edittext_screen"
+        android:layout="@layout/pref_textview"
+        android:summary="設定Voronoi圖參數"
+        android:title="Voronoi圖" >
+        <ListPreference
+            android:defaultValue="@string/default_NodeList_entries"
+            android:dialogTitle="請選擇間隔的節點數量"
+            android:entries="@array/NodeList_entries"
+            android:entryValues="@array/NodeList_entries"
+            android:key="VoronoiNode"
+            android:summary="每隔幾點取一個節點"
+            android:title="間隔節點數" >
+        </ListPreference>
+
+        <com.example.wifiscanner.SwitchPref
+            android:defaultValue="true"
+            android:key="VDisplayPath"
+            android:summaryOff="隱藏Voronoi圖的移動路徑"
+            android:summaryOn="顯示Voronoi圖的移動路徑"
+            android:title="路徑" />
+
+        <com.example.wifiscanner.SwitchPref
+            android:defaultValue="false"
+            android:key="VDisplayNOCALNode"
+            android:summaryOff="隱藏未被計算Voronoi圖的節點"
+            android:summaryOn="顯示未被計算Voronoi圖的節點"
+            android:title="未被計算的節點" />
+
+        <com.example.wifiscanner.SwitchPref
+            android:defaultValue="false"
+            android:key="VDisplayNode"
+            android:summaryOff="隱藏節點"
+            android:summaryOn="顯示節點"
+            android:title="節點" />
+
+        <com.example.wifiscanner.SwitchPref
+            android:defaultValue="false"
+            android:key="VDisplayPossibleAP"
+            android:summaryOff="隱藏可能的AP位置"
+            android:summaryOn="顯示可能的AP位置"
+            android:title="可能的AP位置" />
+
+        <com.example.wifiscanner.SwitchPref
+            android:defaultValue="false"
+            android:key="VDisplayWifiCircle"
+            android:summaryOff="隱藏未知AP可能的所在圓周"
+            android:summaryOn="顯示未知AP可能的所在圓周"
+            android:title="未知AP" />
+
+    </PreferenceCategory>
+
+    <!-- 第一组 -->
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="edittext_screen"
+        android:layout="@layout/pref_textview"
+        android:summary="設定Wi-Fi接收計算參數"
+        android:title="進階" >
+        <ListPreference
+            android:defaultValue="@string/default_FrequencyList_entries"
+            android:dialogTitle="請選擇秒數"
+            android:entries="@array/FrequencyList_entries"
+            android:entryValues="@array/FrequencyList_value_entries"
+            android:key="Frequency"
+            android:summary="選擇每隔多久計算一次數據"
+            android:title="計算週期" >
+        </ListPreference>
+        <ListPreference
+            android:defaultValue="@string/default_DifferenceFilter_entries"
+            android:dialogTitle="請選擇差值"
+            android:entries="@array/DifferenceFilter_entries"
+            android:entryValues="@array/DifferenceFilter_entries"
+            android:key="DifferenceFilter"
+            android:summary="選擇差值"
+            android:title="訊號強度篩選差值" >
+        </ListPreference>
+        <ListPreference
+            android:defaultValue="@string/default_PathLoss_entries"
+            android:dialogTitle="請選擇消耗係數"
+            android:entries="@array/PathLoss_entries"
+            android:entryValues="@array/PathLoss_entries"
+            android:key="PathLoss"
+            android:summary="選擇消耗係數"
+            android:title="路徑消耗係數" >
+        </ListPreference>
+
+        <EditTextPreference
+            android:defaultValue="50"
+            android:dialogTitle="輸入訊號值"
+            android:inputType="numberDecimal"
+            android:key="DefaultRSSI"
+            android:negativeButtonText="取消"
+            android:numeric="integer"
+            android:positiveButtonText="確定"
+            android:title="距離一公尺的訊號值" >
+        </EditTextPreference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

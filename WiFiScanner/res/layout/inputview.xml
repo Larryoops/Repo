@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:orientation="vertical"
+        android:scrollbars="none" >
+
+        <com.example.wifiscanner.ShowInput
+            android:id="@+id/show_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#666666" />
+
+        <Button
+            android:id="@+id/analyze_button"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="21dp"
+            android:background="@drawable/analyze" />
+
+    </RelativeLayout>
+
+</FrameLayout>

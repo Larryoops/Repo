@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FloatWindowLayout"
+    android:layout_width="120dip"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_small9p"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:orientation="vertical"
+        android:scrollbars="none" >
+
+        <TableRow
+                android:id="@+id/Row0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center" >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="40dp"
+                android:id="@+id/walk_icon"
+                android:src="@drawable/walk" />
+
+            <TextView
+                android:id="@+id/FloatNode"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:text="初始化"
+                android:textColor="#ffffff" />
+        </TableRow>
+
+         <TableRow
+                android:id="@+id/Row1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@+id/Row0"
+                android:layout_marginTop="1.0dip"
+                 >
+
+            <TextView
+                android:id="@+id/FloatNode_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="upload"
+                android:textColor="#ffffff" />
+        </TableRow>
+    </RelativeLayout>
+
+</RelativeLayout>

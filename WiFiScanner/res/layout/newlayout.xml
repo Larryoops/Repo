@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.wifiscanner"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/grey_background" >
+
+    <ScrollView
+        android:id="@+id/ScrollMain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadingEdge="none"
+            android:orientation="vertical"
+            android:scrollbars="none" >
+
+            <TableRow
+                android:id="@+id/tableRow0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1.0dip"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/maintop"
+                    android:layout_width="200.0dip"
+                    android:layout_height="76.0dip"
+                    android:src="@drawable/wimap_transparent" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tableRow0"
+                android:layout_below="@+id/tableRow0"
+                android:layout_marginTop="1.0dip"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/map_button"
+                    android:layout_width="110.0dip"
+                    android:layout_height="110.0dip"
+                    android:layout_marginRight="20.0dip"
+                    android:background="@drawable/map_selector" />
+
+                <Button
+                    android:id="@+id/start_button"
+                    android:layout_width="110.0dip"
+                    android:layout_height="110.0dip"
+                    android:background="@drawable/scan_selector" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tableRow1"
+                android:layout_below="@+id/tableRow1"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/input_button"
+                    android:layout_width="110.0dip"
+                    android:layout_height="110.0dip"
+                    android:layout_marginRight="20.0dip"
+                    android:background="@drawable/input_selector" />
+
+                <Button
+                    android:id="@+id/wifi_button"
+                    android:layout_width="110.0dip"
+                    android:layout_height="110.0dip"
+                    android:background="@drawable/wifi_selector" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tableRow2"
+                android:layout_below="@+id/tableRow2"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/setting_button"
+                    android:layout_width="110.0dip"
+                    android:layout_height="110.0dip"
+                    android:background="@drawable/setting_selector" />
+
+                <Button
+                    android:id="@+id/information_button"
+                    android:layout_width="110.0dip"
+                    android:layout_height="110.0dip"
+                    android:layout_marginLeft="20.0dip"
+                    android:background="@drawable/information_selector" />
+            </TableRow>
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/Bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/bottom"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

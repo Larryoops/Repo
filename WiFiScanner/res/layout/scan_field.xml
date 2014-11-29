@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10.0dip"
+    android:paddingBottom="10dip" >
+
+    <ImageView
+        android:id="@+id/WifiView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_signal_wifi_statusbar_not_connected_black_48dp" />
+
+    <TextView
+        android:id="@+id/MACView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_below="@+id/SSIDView"
+        android:layout_alignLeft="@+id/SSIDView"
+        android:layout_marginLeft="2dp"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:text="Mac" />
+
+    <TextView
+        android:id="@+id/SSIDView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/WifiView"
+        android:layout_toRightOf="@+id/WifiView"
+        android:layout_marginLeft="10dp"
+        android:text="SSID"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/ChannelView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/TextWord"
+        android:text="Channel" 
+        android:textSize="10sp"
+        android:textColor="#0404B4"
+        android:textStyle="bold"
+        />
+<!--  
+    <TextView
+        android:id="@+id/LockView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SSIDView"
+        android:layout_alignLeft="@+id/SSIDView"
+        android:text="Lock" />
+        
+        <TextView
+        android:id="@+id/RSSIView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="44dp"
+        android:layout_toRightOf="@+id/MACView"
+        android:text="RSSI"
+        android:textSize="20sp" />
+        
+        <TextView
+        android:id="@+id/MACView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/SSIDView"
+        android:layout_toRightOf="@+id/SSIDView"
+        android:layout_marginLeft="2dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Mac" />
+        
+        <TextView
+        android:id="@+id/RSSIView"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SSIDView"
+        android:layout_alignLeft="@+id/SSIDView"
+        android:text="RSSI"
+        android:textSize="18sp" />
+-->    
+    <TextView
+        android:id="@+id/TextWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通道"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        />
+
+     <TextView
+         android:id="@+id/RSSIView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="true"
+         android:textColor="#000000"
+         android:text="RSSI"
+         android:textSize="20sp" />
+
+</RelativeLayout>
